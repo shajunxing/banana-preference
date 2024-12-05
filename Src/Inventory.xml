@@ -1,0 +1,43 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/
+..\FrameXML\UI.xsd">
+    <Script file="Inventory.lua"/>
+    <Button name="BananaBankDepositAllMoneyButton" inherits="UIPanelButtonTemplate" text="BANANA_BANK_DEPOSIT_ALL_MONEY_BUTTON_LABEL" parent="BankSlotsFrame">
+        <Size x="105" y="21"/>
+        <Anchors>
+            <Anchor point="BOTTOMRIGHT" x="-5" y="5"/>
+        </Anchors>
+        <Scripts>
+            <OnClick function="BananaBankDepositAllMoneyButton_OnClick"/>
+            <OnEnter>
+                GameTooltip:SetOwner(self, "ANCHOR_RIGHT");
+                GameTooltip:SetText(BANANA_BANK_DEPOSIT_ALL_MONEY_BUTTON_TOOLTIP);
+            </OnEnter>
+            <OnLeave>
+                GameTooltip:Hide();
+            </OnLeave>
+        </Scripts>
+    </Button>
+    <Button name="BananaSellAllButtonTemplate" virtual="true">
+        <Size x="32" y="32"/>
+        <NormalTexture file="Interface\Buttons\UI-GroupLoot-Coin-Up"/>
+        <HighlightTexture file="Interface\Buttons\UI-GroupLoot-Coin-Highlight" alphaMode="ADD"/>
+        <PushedTexture file="Interface\Buttons\UI-GroupLoot-Coin-Down"/>
+        <Scripts>
+            <OnEnter>
+                GameTooltip:SetOwner(self, "ANCHOR_LEFT");
+                GameTooltip:SetText(BANANA_SELL_ALL_BUTTON_TOOLTIP);
+            </OnEnter>
+            <OnLeave>
+                GameTooltip:Hide();
+            </OnLeave>
+            <OnLoad function="BananaSellAllButtonTemplate_OnLoad"/>
+            <OnClick function="BananaSellAllButtonTemplate_OnClick"/>
+        </Scripts>
+    </Button>
+    <Button name="ContainerFrame1SellAllButton" inherits="BananaSellAllButtonTemplate"/>
+    <Button name="ContainerFrame2SellAllButton" inherits="BananaSellAllButtonTemplate"/>
+    <Button name="ContainerFrame3SellAllButton" inherits="BananaSellAllButtonTemplate"/>
+    <Button name="ContainerFrame4SellAllButton" inherits="BananaSellAllButtonTemplate"/>
+    <Button name="ContainerFrame5SellAllButton" inherits="BananaSellAllButtonTemplate"/>
+    <Button name="ContainerFrameCombinedBagsSellAllButton" inherits="BananaSellAllButtonTemplate"/>>
+</Ui>

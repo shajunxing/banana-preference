@@ -1,0 +1,9 @@
+## Interface: 110005
+## Title: |cFFFFFF00Banana Preference|r
+## Title-zhCN: |cFFFFFF00香蕉偏好|r
+## Notes: |cFF00FF66Game UI Simplification And Enhancement|r
+## Notes-zhCN: |cFF00FF66游戏界面的精简和增强|r
+## Version: 2.0.0
+## IconTexture: Interface\Icons\INV_Misc_Food_23
+
+Src\Main.xml
